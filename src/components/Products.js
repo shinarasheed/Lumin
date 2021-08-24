@@ -6,7 +6,6 @@ import { FETCH_PRODUCT_QUERY } from "../queries/product";
 
 function Products() {
   const { error, loading, data } = useQuery(FETCH_PRODUCT_QUERY);
-  console.log(data);
 
   if (loading)
     return (
@@ -24,11 +23,11 @@ function Products() {
   if (error) return `Error! ${error.message}`;
 
   return (
-    <>
+    <section className="products">
       {data.products.map((product) => {
-        return <Product key={product.id} product={product} />;
+        return <Product key={product.id} {...product} />;
       })}
-    </>
+    </section>
   );
 }
 
