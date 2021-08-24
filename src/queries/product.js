@@ -6,6 +6,7 @@ export const FETCH_PRODUCT_QUERY = gql`
       id
       image_url
       title
+      price(currency: USD)
     }
   }
 `;
