@@ -1,15 +1,25 @@
 import React from "react";
 
-export default function Product({ title, image_url, price }) {
+import Sidebar from "./Sidebar";
+
+export default function Product({ product, currency }) {
   return (
     <div className="product">
       <div className="product-imageurl-container">
-        <img className="product-imageurl" src={image_url} alt={title} />
+        <img
+          className="product-imageurl"
+          src={product.image_url}
+          alt={product.title}
+        />
       </div>
-      <div>
-        <h5 className="product-title"> {title}</h5>
-        <p className="product-price">From {price}</p>
-        <button className="product-btn">Add to Cart</button>
+      <div className="productbuttoncontainer">
+        <h5 className="product-title"> {product.title}</h5>
+        <p className="product-price">
+          {currency === "USD" ? "$" : null}
+          {product.price}
+        </p>
+
+        <Sidebar product={product} />
       </div>
     </div>
   );
