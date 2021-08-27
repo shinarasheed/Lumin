@@ -51,27 +51,25 @@ export default function CartDrawer({ product }) {
         size="lg"
       >
         <DrawerOverlay />
-        <DrawerContent className="drawerContent">
+        <DrawerContent>
           <DrawerCloseButton className={styles.cartCloseBtn} />
-          <DrawerHeader className={styles.cartHeaderText}>
-            YOUR CART
-          </DrawerHeader>
+          <DrawerHeader className={styles.headerText}>YOUR CART</DrawerHeader>
 
           <DrawerBody>
             <div className={styles.cartSection}>
               {cart.length === 0 ? (
-                <h1 className={styles.cartEmptyText}>Your Cart is Empty!</h1>
+                <h1 className={styles.emptyText}>Your Cart is Empty!</h1>
               ) : (
                 <>
                   {cart.map((item) => (
-                    <div key={item.id} className={styles.cartItemContainer}>
-                      <div className={styles.cartItemDescription}>
+                    <div key={item.id} className={styles.container}>
+                      <div className={styles.descriptionContainer}>
                         <h5>{item.title}</h5>
                         <span>Dry | 35-45</span>
                         <p>One time purchase of Two Month Supply</p>
                       </div>
-                      <div className={styles.itemImageContainer}>
-                        <div className={styles.itemButtonsContainer}>
+                      <div className={styles.imgContainer}>
+                        <div className={styles.btnContainer}>
                           <button
                             onClick={() => dispatch(decrementQuantity(item.id))}
                           >
@@ -85,17 +83,13 @@ export default function CartDrawer({ product }) {
                           </button>
                         </div>
 
-                        <div className={styles.itemPriceContainer}>
+                        <div className={styles.priceContainer}>
                           <p>${item.quantity * item.price}</p>
-                          <img
-                            className={styles.itemPriceContainerImg}
-                            src={item.image_url}
-                            alt={item.title}
-                          />
+                          <img src={item.image_url} alt={item.title} />
                         </div>
 
                         <button
-                          className={styles.itemCloseButton}
+                          className={styles.closeBtn}
                           onClick={() => dispatch(removeFromCart(item.id))}
                         >
                           X
@@ -108,8 +102,8 @@ export default function CartDrawer({ product }) {
             </div>
           </DrawerBody>
 
-          <DrawerFooter className={styles.cartDrawerFooter}>
-            <div className={styles.itemSubtotal}>
+          <DrawerFooter className={styles.footer}>
+            <div className={styles.subtotal}>
               <span>Subtotal</span> <span>${getTotalPrice()}</span>
             </div>
             <button className={styles.checkoutBtn}>Proceed to Checkout</button>

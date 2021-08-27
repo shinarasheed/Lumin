@@ -1,7 +1,6 @@
-import React from "react";
 import { useQuery } from "@apollo/client";
 
-import { FETCH_CURENCY_QUERY } from "../queries/product";
+import { FETCH_CURENCY_QUERY } from "../graphql/product";
 
 function CurrencySelector({ setCurrency }) {
   const { data: currenciesData } = useQuery(FETCH_CURENCY_QUERY);
@@ -11,7 +10,7 @@ function CurrencySelector({ setCurrency }) {
   };
 
   return (
-    <div className="filterContainer">
+    <div className="currencySelectContainer">
       {currenciesData !== undefined && (
         <select
           className="currencySelect"

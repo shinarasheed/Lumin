@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Products from "../components/Products";
-import Filter from "../components/Filter";
+import ProductsCta from "../components/ProductsCta";
 
 function Home() {
   return (
@@ -11,7 +11,7 @@ function Home() {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="shortcut icon" href="/favicon.png" />
       </Head>
-      <Filter />
+      <ProductsCta />
       <Products />
     </>
   );

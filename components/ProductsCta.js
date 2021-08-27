@@ -2,7 +2,7 @@ import React from "react";
 
 const Filter = () => {
   return (
-    <section className="filter">
+    <section className="productsCtaContainer">
       <div>
         <h2>All Products</h2>
         <p>

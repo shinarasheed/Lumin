@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import CartDrawer from "../components/CartDrawer";
+import Cart from "../components/Cart";
 import styles from "../styles/Product.module.scss";
 
 export default function Product({ product, currency }) {
@@ -14,14 +14,14 @@ export default function Product({ product, currency }) {
           width={100}
         />
       </div>
-      <div className={styles.productTitleContainer}>
+      <div className={styles.titleContainer}>
         <h5> {product.title}</h5>
         <p>
           {currency === "USD" ? "$" : null}
           {product.price}
         </p>
 
-        <CartDrawer product={product} />
+        <Cart product={product} />
       </div>
     </div>
   );

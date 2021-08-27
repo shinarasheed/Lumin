@@ -1,6 +1,6 @@
 @import "../styles/fonts";
 
-.navbar {
+.navBar {
   background: #f5f5f4;
   display: flex;
   justify-content: space-between;
@@ -15,32 +15,32 @@
   box-shadow: 0 2px 3px -3px grey;
 }
 
-.navbar a {
+.navBar a {
   font-size: 14px;
 }
 
-.logocontainer {
+.logoContainer {
   display: flex;
   flex: 1;
   align-items: center;
   justify-content: center;
 }
-.navlinkcontainer {
+.navLinksContainer {
   display: flex;
   flex: 1;
   margin-left: 4rem;
 }
 
-.navlinkcontainer a:not(:first-child) {
+.navLinksContainer a:not(:first-child) {
   margin-left: 3rem;
 }
 
-.cartcontainer {
+.cartContainer {
   display: flex;
   align-items: center;
 }
 
-.navbar .cart {
+.navBar .cart {
   margin-left: 1rem;
 }
 .itemCountContainer {
@@ -54,15 +54,11 @@
   font-size: 15px;
 }
 
-.menuIcon {
+.navCloseBtn {
   display: none;
 }
 
-.close {
-  display: none;
-}
-
-.open {
+.navOpenBtn {
   display: none;
 }
 
@@ -72,7 +68,7 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .logocontainer {
+  .logoContainer {
     flex-direction: column;
     width: 75vw;
     height: 100vh;
@@ -85,34 +81,26 @@
     align-items: flex-start;
   }
 
-  .logocontainer.isOpen {
+  .logoContainer.isOpen {
     background-color: #f5f5f4;
     left: 0;
     transition: all 0.5s ease;
     z-index: 3;
   }
 
-  .menuIcon {
-    display: block;
-    position: absolute;
-    left: 30px;
-    width: 20px;
-    height: 20px;
-  }
-
-  .navlinkcontainer {
+  .navLinksContainer {
     margin-left: 2rem;
     margin-top: 3rem;
   }
 
-  .close {
+  .navCloseBtn {
     position: absolute;
     display: block;
     top: 35px;
     right: 20px;
     font-size: 17px;
   }
-  .open {
+  .navOpenBtn {
     position: absolute;
     display: block;
     top: 28px;
@@ -120,7 +108,7 @@
     font-size: 16px;
   }
 
-  .navbar {
+  .navBar {
     justify-content: flex-end;
     padding: 0 4rem 0 0;
   }

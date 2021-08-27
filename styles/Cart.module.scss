@@ -1,10 +1,4 @@
-// @import "../styles/base";
-
-.drawerContent {
-  background-color: red;
-}
-
-.cartItemContainer {
+.container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -14,40 +8,40 @@
   position: relative;
 }
 
-.itemCloseButton {
+.closeBtn {
   position: absolute;
   top: 5px;
   right: 14px;
   font-size: 15px;
 }
 
-.cartItemDescription {
+.descriptionContainer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  h5 {
+    font-size: 13px;
+  }
+
+  span {
+    font-size: 10px;
+    margin-bottom: 3px;
+  }
+
+  p {
+    font-size: 11px;
+  }
 }
 
-.cartItemDescription h5 {
-  font-size: 13px;
-}
-
-.cartItemDescription span {
-  font-size: 10px;
-  margin-bottom: 3px;
-}
-
-.cartItemDescription p {
-  font-size: 11px;
-}
-
-.itemImageContainer {
+.imgContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 
-.itemButtonsContainer {
+.btnContainer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,35 +49,35 @@
   padding: 0 1rem;
   height: 35px;
   width: 80px;
+
+  button {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+  }
+
+  & button:first-child {
+    margin-right: 1rem;
+  }
 }
 
-.itemButtonsContainer button {
-  font-size: 1.5rem;
-}
-
-.itemButtonsContainer p {
-  font-size: 1.5rem;
-}
-
-.itemButtonsContainer button:first-child,
-.itemButtonsContainer p {
-  margin-right: 1rem;
-}
-
-.itemPriceContainer {
+.priceContainer {
   display: flex;
   align-items: center;
+  p {
+    font-size: 15px;
+    margin-right: 5rem;
+  }
+
+  img {
+    height: 40px;
+  }
 }
 
-.itemPriceContainer p {
-  font-size: 15px;
-  margin-right: 5rem;
-}
-.itemPriceContainerImg {
-  height: 40px;
-}
-
-.itemSubtotal {
+.subtotal {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -91,7 +85,7 @@
   font-size: 14px;
 }
 
-.cartHeaderText {
+.headerText {
   text-align: center;
   font-size: 10px !important;
 }
@@ -105,47 +99,46 @@
   left: 1rem;
 }
 
-.cartEmptyText {
+.emptyText {
   text-align: center;
 }
 
-.cartDrawerFooter {
+.footer {
   display: flex;
   flex-direction: column;
 }
 
-.checkoutBtn {
-  border: none;
-  background: rgb(75, 85, 72);
-  color: rgb(252, 252, 249);
-  cursor: pointer;
-  font-weight: 400;
-  font-size: 1.5rem;
-  transition: all 0.1s ease-in-out;
-  display: block;
-  width: 100%;
-  padding: 1rem 0;
-}
-
+.checkoutBtn,
 .productbtn {
   border: none;
   background: rgb(75, 85, 72);
   color: rgb(252, 252, 249);
   cursor: pointer;
-  font-weight: 600;
-  font-size: 14px;
+  font-weight: 400;
   transition: all 0.1s ease-in-out;
   display: block;
-  margin: 0 auto;
-  padding: 1rem 5rem;
-  @media screen and(max-width:768px) {
-    font-size: 12px;
-  }
-  @media screen and(max-width:375px) {
-    font-size: 10px;
-  }
 }
 
-.productbtn:hover {
-  background-color: #000;
+.checkoutBtn {
+  font-size: 1.5rem;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.productbtn {
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0 auto;
+  padding: 1rem 5rem;
+
+  &:hover {
+    background-color: #000;
+  }
+
+  @media screen and(max-width: 768px) {
+    font-size: 12px;
+  }
+  @media screen and(max-width: 375px) {
+    font-size: 10px;
+  }
 }

@@ -5,7 +5,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import Layout from "../components/Layout";
 import store from "../redux/store";
 import client from "../apollo-client";
-import "../styles/globals.scss";
+import "../styles/Globals.scss";
 
 function MyApp({ Component, pageProps }) {
   return (

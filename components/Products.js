@@ -3,7 +3,9 @@ import { useQuery } from "@apollo/client";
 
 import CurrencySelector from "./CurrencySelector";
 import Product from "../components/Product";
-import { FETCH_PRODUCT_QUERY } from "../queries/product";
+
+import { FETCH_PRODUCT_QUERY } from "../graphql/product";
+
 import styles from "../styles/Product.module.scss";
 
 function Products() {
@@ -17,17 +19,9 @@ function Products() {
   return (
     <>
       <CurrencySelector setCurrency={setCurrency} />
-
-      <section className={styles.productscontainer}>
+      <section className={styles.container}>
         {loading ? (
-          <div
-            style={{
-              height: "100vh",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
+          <div className={styles.loading}>
             <h5>Loading</h5>
           </div>
         ) : error ? (

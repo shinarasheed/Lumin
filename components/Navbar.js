@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import { useSelector } from "react-redux";
@@ -25,19 +23,19 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={styles.navbar}>
-      <GiHamburgerMenu className={styles.open} onClick={handleIsOpen} />
+    <nav className={styles.navBar}>
+      <GiHamburgerMenu className={styles.navOpenBtn} onClick={handleIsOpen} />
       <div
         className={
           isOpen
-            ? `${styles.logocontainer} ${styles.isOpen}`
-            : `${styles.logocontainer}`
+            ? `${styles.logoContainer} ${styles.isOpen}`
+            : `${styles.logoContainer}`
         }
       >
         <Link className="logo" href="/">
           <img className={styles.brandLogo} src="/lumin.png" alt="brand logo" />
         </Link>
-        <div className={styles.navlinkcontainer}>
+        <div className={styles.navLinksContainer}>
           <Link href="/">
             <a>Shop</a>
           </Link>
@@ -47,11 +45,11 @@ const Navbar = () => {
         </div>
 
         <IoCloseCircleOutline
-          className={styles.close}
+          className={styles.navCloseBtn}
           onClick={closeMobileMenu}
         />
       </div>
-      <div className={styles.cartcontainer}>
+      <div className={styles.cartContainer}>
         <Link href="/">
           <a>Account</a>
         </Link>
