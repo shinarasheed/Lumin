@@ -28,7 +28,7 @@ function Products() {
               alignItems: "center",
             }}
           >
-            <h5>"Loading..."</h5>
+            <h5>Loading</h5>
           </div>
         ) : error ? (
           <p>{error.message}</p>
