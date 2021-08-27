@@ -5,7 +5,9 @@ const Filter = () => {
     <section className="filter">
       <div>
         <h2>All Products</h2>
-        <p>A 360 look at Lumin</p>
+        <p>
+          A 360<sup>&#176;</sup> look at Lumin
+        </p>
       </div>
     </section>
   );
