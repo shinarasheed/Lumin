@@ -22,7 +22,7 @@ function Products() {
       <section className={styles.container}>
         {loading ? (
           <div className={styles.loading}>
-            <h5>Loading</h5>
+            <img src="/spinner.gif" />
           </div>
         ) : error ? (
           <p>{error.message}</p>
