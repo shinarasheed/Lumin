@@ -5,7 +5,6 @@ import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
-// 2. Extend the theme to include custom colors, fonts, etc
 const colors = {
   brand: {
     900: "#1a365d",

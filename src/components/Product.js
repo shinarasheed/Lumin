@@ -1,25 +1,21 @@
 import React from "react";
 
-import Sidebar from "./Sidebar";
+import CartDrawer from "../components/CartDrawer";
 
 export default function Product({ product, currency }) {
   return (
     <div className="product">
-      <div className="product-imageurl-container">
-        <img
-          className="product-imageurl"
-          src={product.image_url}
-          alt={product.title}
-        />
+      <div>
+        <img src={product.image_url} alt={product.title} />
       </div>
-      <div className="productbuttoncontainer">
-        <h5 className="product-title"> {product.title}</h5>
-        <p className="product-price">
+      <div>
+        {/* <h5> {product.title}</h5>
+        <p>
           {currency === "USD" ? "$" : null}
           {product.price}
         </p>
 
-        <Sidebar product={product} />
+        <CartDrawer product={product} /> */}
       </div>
     </div>
   );
