@@ -1,0 +1,131 @@
+@import "../styles/fonts";
+
+.navbar {
+  background: #f5f5f4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4rem;
+  border-bottom: 1px solid #f5f5f4;
+  font-family: FF Bau Regular;
+  position: sticky;
+  top: 0;
+  height: 64px;
+  z-index: 1;
+  box-shadow: 0 2px 3px -3px grey;
+}
+
+.navbar a {
+  font-size: 14px;
+}
+
+.logocontainer {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+.navlinkcontainer {
+  display: flex;
+  flex: 1;
+  margin-left: 4rem;
+}
+
+.navlinkcontainer a:not(:first-child) {
+  margin-left: 3rem;
+}
+
+.cartcontainer {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .cart {
+  margin-left: 1rem;
+}
+.itemCountContainer {
+  position: relative;
+}
+
+.itemCount {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 15px;
+}
+
+.menuIcon {
+  display: none;
+}
+
+.close {
+  display: none;
+}
+
+.open {
+  display: none;
+}
+
+.brandLogo {
+  height: 40px;
+  width: 150px;
+}
+
+@media only screen and (max-width: 768px) {
+  .logocontainer {
+    flex-direction: column;
+    width: 75vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    margin-left: 0;
+    align-items: flex-start;
+  }
+
+  .logocontainer.isOpen {
+    background-color: #f5f5f4;
+    left: 0;
+    transition: all 0.5s ease;
+    z-index: 3;
+  }
+
+  .menuIcon {
+    display: block;
+    position: absolute;
+    left: 30px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .navlinkcontainer {
+    margin-left: 2rem;
+    margin-top: 3rem;
+  }
+
+  .close {
+    position: absolute;
+    display: block;
+    top: 35px;
+    right: 20px;
+    font-size: 17px;
+  }
+  .open {
+    position: absolute;
+    display: block;
+    top: 28px;
+    left: 20px;
+    font-size: 16px;
+  }
+
+  .navbar {
+    justify-content: flex-end;
+    padding: 0 4rem 0 0;
+  }
+
+  .brandLogo {
+    display: none;
+  }
+}

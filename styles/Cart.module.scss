@@ -1,0 +1,151 @@
+// @import "../styles/base";
+
+.drawerContent {
+  background-color: red;
+}
+
+.cartItemContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  margin-top: 15px;
+  position: relative;
+}
+
+.itemCloseButton {
+  position: absolute;
+  top: 5px;
+  right: 14px;
+  font-size: 15px;
+}
+
+.cartItemDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cartItemDescription h5 {
+  font-size: 13px;
+}
+
+.cartItemDescription span {
+  font-size: 10px;
+  margin-bottom: 3px;
+}
+
+.cartItemDescription p {
+  font-size: 11px;
+}
+
+.itemImageContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.itemButtonsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  padding: 0 1rem;
+  height: 35px;
+  width: 80px;
+}
+
+.itemButtonsContainer button {
+  font-size: 1.5rem;
+}
+
+.itemButtonsContainer p {
+  font-size: 1.5rem;
+}
+
+.itemButtonsContainer button:first-child,
+.itemButtonsContainer p {
+  margin-right: 1rem;
+}
+
+.itemPriceContainer {
+  display: flex;
+  align-items: center;
+}
+
+.itemPriceContainer p {
+  font-size: 15px;
+  margin-right: 5rem;
+}
+.itemPriceContainerImg {
+  height: 40px;
+}
+
+.itemSubtotal {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 2rem;
+  font-size: 14px;
+}
+
+.cartHeaderText {
+  text-align: center;
+  font-size: 10px !important;
+}
+
+.cartSection {
+  position: relative;
+}
+
+.cartCloseBtn {
+  position: absolute;
+  left: 1rem;
+}
+
+.cartEmptyText {
+  text-align: center;
+}
+
+.cartDrawerFooter {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkoutBtn {
+  border: none;
+  background: rgb(75, 85, 72);
+  color: rgb(252, 252, 249);
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 1.5rem;
+  transition: all 0.1s ease-in-out;
+  display: block;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.productbtn {
+  border: none;
+  background: rgb(75, 85, 72);
+  color: rgb(252, 252, 249);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.1s ease-in-out;
+  display: block;
+  margin: 0 auto;
+  padding: 1rem 5rem;
+  @media screen and(max-width:768px) {
+    font-size: 12px;
+  }
+  @media screen and(max-width:375px) {
+    font-size: 10px;
+  }
+}
+
+.productbtn:hover {
+  background-color: #000;
+}

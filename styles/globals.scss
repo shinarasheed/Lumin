@@ -1,0 +1,38 @@
+@import "./styles/base";
+@import "./styles/variables";
+@import "./styles/fonts";
+
+.filterContainer {
+  padding: 2rem;
+  background-color: #f5f5f4;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.filter {
+  background: #f5f5f4;
+  padding: 1rem 0 6rem 5rem;
+}
+
+.currencySelect {
+  padding: 10px 0 10px 10px;
+  font-size: 12px;
+}
+
+.filter h2 {
+  font-size: 4rem;
+}
+
+.filter p {
+  font-size: 1.5rem;
+}
+
+.chakra-slide {
+  background-color: #f5f5f4 !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .filter {
+    padding-left: 1rem;
+  }
+}
